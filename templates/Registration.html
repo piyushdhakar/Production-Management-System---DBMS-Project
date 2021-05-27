@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .root{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .subdiv{
+      width:550px;
+      height: auto;
+
+      background:#34495e;
+      border:solid:#34495e;
+      padding:5px;
+      box-shadow: 0px 0px 20px 0px #0a0a0a;
+      border-radius:10px;
+
+
+    }
+    .change{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    color: #576574;
+    font-weight:bold;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    font-size: 50px;
+
+    }
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js">
+</script>
+
+
+    <link rel="stylesheet" href="/static/css/app.css">
+    <title> Registration</title>
+</head>
+<body>
+<form action="/submitregistration" method="post" enctype="multipart/form-data"> {% csrf_token %}
+<div class="change">
+    REGISTRATION
+
+</div>
+<div class="root">
+    <div class="subdiv">
+
+
+
+
+
+          <div class="form-group has-icon"><i class="icon-id-badge"></i>
+                            <input type="text" class="form-control form-control-lg"
+                                   placeholder= "Distributor Name" name="distributorname">
+        </div>
+       <div class="form-group has-icon"><i class="icon-id-badge"></i>
+                            <input type="text" class="form-control form-control-lg"
+                                   placeholder= "Distributor Mobile Number" name="distributormobno">
+        </div>
+        <div class="form-group has-icon"><i class="icon-list-alt"></i>
+                            <input type="text" class="form-control form-control-lg"
+                                   placeholder="City" name="city">
+        </div>
+        <div class="form-group has-icon"><i class="icon-list-alt"></i>
+                            <input type="text" class="form-control form-control-lg"
+                                   placeholder="state" name="state">
+        </div>
+
+        <div class="form-group  ">
+                <input type="submit" class="btn btn-dark" value="Submit">
+            </div>
+        <div class="form-group">
+       {{ msg }}
+      </div>
+
+    </div>
+</div>
+</form>
+
+</body>
+</html>

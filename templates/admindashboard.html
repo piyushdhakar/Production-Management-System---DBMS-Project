@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<!-- Mirrored from xvelopers.com/demos/html/paper-panel/panel-page-dashboard4.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Jan 2021 09:43:52 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+    <title>Admin Home</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/css/app.css">
+    <style>
+        .loader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #F5F8FA;
+            z-index: 9998;
+            text-align: center;
+        }
+
+        .plane-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    </style>
+    <!-- Js -->
+    <!--
+    --- Head Part - Use Jquery anywhere at page.
+    --- http://writing.colin-gourlay.com/safely-using-ready-before-including-jquery/
+    -->
+    <script>(function(w,d,u){w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}})(window,document)</script>
+</head>
+<body class="light">
+<!-- Pre loader -->
+<div id="loader" class="loader">
+    <div class="plane-container">
+        <div class="preloader-wrapper small active">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="app">
+<aside class="main-sidebar fixed offcanvas shadow bg-primary text-white no-b theme-dark">
+    <section class="sidebar">
+        <div class="w-80px mt-3 mb-3 ml-3">
+            <img src="static/img/basic/circles.png" alt="">
+            <h2><b><a href="/admindashboard">HOME</a></b></h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li class="header"><strong>MAIN NAVIGATION</strong></li>
+            <li class="treeview"><a href="#">
+                <i class="icon icon-folder2 purple-text s-18"></i> <span>Products</span> <i
+                    class="icon icon-angle-left s-18 pull-right"></i>
+            </a>
+                <ul class="treeview-menu">
+                    <li><a href="/companyinterface" target="mw"><i class="icon icon-add"></i>Add Products</a>
+                    </li>
+                    <li><a href="/allcompanies" target="mw"><i class="icon icon-folder5"></i>List of Products</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="treeview"><a href="#">
+                <i class="icon icon-folder2 purple-text s-18"></i> <span>Distributors</span> <i
+                    class="icon icon-angle-left s-18 pull-right"></i>
+            </a>
+                <ul class="treeview-menu">
+                    <li><a href="/registration" target="mw"><i class="icon icon-add"></i>Add Distributors</a>
+                    </li>
+                    <li><a href="/displayregistration"  target="mw"><i class="icon icon-folder5"></i>Show Distributors</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="treeview"><a href="#">
+                <i class="icon icon-folder2 purple-text s-18"></i> <span>Sales</span> <i
+                    class="icon icon-angle-left s-18 pull-right"></i>
+            </a>
+                <ul class="treeview-menu">
+                    <li><a href="/companyinterface" target="mw"><i class="icon icon-add"></i>Add Sales Info</a>
+                    </li>
+                    <li><a href="/allcompanies" target="mw"><i class="icon icon-folder5"></i>Show Sales Info</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="treeview"><a href="#">
+                <i class="icon icon-folder2 purple-text s-18"></i> <span>Orders</span> <i
+                    class="icon icon-angle-left s-18 pull-right"></i>
+            </a>
+                <ul class="treeview-menu">
+
+                    <li><a href="/allcompanies" target="mw"><i class="icon icon-folder5"></i>Show orders</a>
+                    </li>
+
+                </ul>
+            </li>
+
+
+        </ul>
+    </section>
+</aside>
+<!--Sidebar End-->
+<div class="has-sidebar-left">
+    <div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark pt-2 pb-2 pl-4 pr-2">
+            <div class="search-bar">
+                <input class="transparent s-24 text-white b-0 font-weight-lighter w-128 height-50" type="text"
+                       placeholder="start typing...">
+            </div>
+            <a href="#" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-expanded="false"
+               aria-label="Toggle navigation" class="paper-nav-toggle paper-nav-white active "><i></i></a>
+        </div>
+    </div>
+</div>
+    <div class="sticky">
+        <div class="navbar navbar-expand d-flex justify-content-between bd-navbar white shadow">
+            <div class="relative">
+                <div class="d-flex">
+                    <div>
+                        <a href="#"  data-toggle="push-menu" class="paper-nav-toggle pp-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                    <div class="d-none d-md-block">
+                        <h1 class="nav-title text-white">Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+            <!--Top Menu Start -->
+<div class="navbar-custom-menu">
+    <ul class="nav navbar-nav">
+        <!-- Messages-->
+
+        <!-- Right Sidebar Toggle Button -->
+       <li class="treeview"><a href="/adminlogout">
+               <i class="fa fa-sign-out" style="font-size:24px"></i> <span><b>Log Out</b></span>
+            </a>
+
+            </li>
+    </ul>
+</div>
+        </div>
+    </div>
+
+
+
+                    <!-- Progress Widget Start -->
+
+                    <!-- Progress Widget End -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="margin-left: 285px">
+    <iframe name="mw" width="1230" height="800" frameborder="0"></iframe>
+</div>
+<!-- Right Sidebar -->
+
+<!-- /.right-sidebar -->
+<!-- Add the sidebar's background. This div must be placed
+         immediately after the control sidebar -->
+<div class="control-sidebar-bg shadow white fixed"></div>
+</div>
+<!--/#app -->
+<script src="static/js/app.js"></script>
+
+
+
+
+<!--
+--- Footer Part - Use Jquery anywhere at page.
+--- http://writing.colin-gourlay.com/safely-using-ready-before-including-jquery/
+-->
+<script>(function($,d){$.each(readyQ,function(i,f){$(f)});$.each(bindReadyQ,function(i,f){$(d).bind("ready",f)})})(jQuery,document)</script>
+</body>
+
+<!-- Mirrored from xvelopers.com/demos/html/paper-panel/panel-page-dashboard4.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Jan 2021 09:43:52 GMT -->
+</html>
